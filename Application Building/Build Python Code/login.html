@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body{background-image: url('static/img/bg1.jpg');color: #fff;background-repeat: no-repeat;background-size: cover;
+        background-position: center;}
+	a{text-decoration:none;color: #fff;}
+	button{border:none;cursor:pointer;height:35px;width:100px;border-radius:2em;background-color:#0697af;margin-left:100px;}
+	.mainForm{padding:130px 50px;height:100vh;background-image: url('static/img/wp2939900.webp');}
+	.logform{text-align:center;height:370px;width:700px;padding-top:60px;margin:auto;background:#01444f;border-radius:25px;}
+	input{outline:none;width:45%;height:35px;padding:5px;}
+	.inp,h3{margin-bottom:30px;}
+	.resPage{margin-top:10px;margin-left:100px;}
+	label{width:120px;}
+    p{text-align: center;}
+  </style>
+</head>
+<body>
+    <div class="mainForm">
+        <form class="logform" action="/validate" method="POST">
+            <h3>LOGIN</h3>
+            <div class="inp">
+                <label>Username : </label>
+                <input type="text" name="username">
+            </div>
+            <div class="inp">
+                <label>Password : </label>
+                <input type="password" name="password">
+            </div>
+            <button type="submit">Login</button>
+            <div class="resPage">
+                <a href="/register">New User?</a>
+            </div>
+            <p>{{msg}}</p>
+        </form>
+    </div>
+</body>
+</html>
